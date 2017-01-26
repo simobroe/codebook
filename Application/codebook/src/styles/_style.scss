@@ -1,0 +1,61 @@
+// main colors
+$primary: #8CC04E;
+$border: #BDBDBD;
+$border_white: #ffffff;
+
+// font colors
+$text_primary: #8CC04E;
+$text_hard: #212121;
+$text_soft: #757575;
+$text_white: #ffffff;
+
+// font sizes
+$text_title: 22px;
+$text_subtitle: 18px;
+$text_paragraph: 16px;
+$text_button: 18px;
+
+// font weights
+$text_light: 300;
+$text_normal: 400;
+$text_bold: 500;
+
+// shadown
+$shadow: 0 3px 6px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+
+// elements
+h1 {
+    font-size: $text_title;
+}
+
+h2 {
+    font-size: $text_subtitle;
+}
+
+p {
+    font-size: $text_paragraph;
+}
+
+// placeholder
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}
+
+@include placeholder {
+    color: $text_white;
+}
+
+#content {
+    @include placeholder {
+        color: $text_soft;
+    }    
+}
+
+// remove chrome autofill background solidcolor
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: $text_hard;
+}

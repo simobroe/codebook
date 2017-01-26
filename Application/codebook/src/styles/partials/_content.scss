@@ -1,0 +1,123 @@
+#content {
+    #authentication {
+        h1 {
+            color: $text_white;
+            background-color: $primary;
+            font-weight: $text_light;
+            padding: 9px 18px;
+        }
+        form {
+            width: 100%;
+        }
+        input:focus {
+            outline: none;
+        }
+
+        input {
+            position: relative;
+            width: 100%;
+            padding-top: 24px;
+            padding-bottom: 6px;
+            border: none;
+            border-bottom: 2px solid $border;
+            font-size: $text_subtitle;
+            transition: border 200ms ease-in-out;
+            box-shadow: none;
+        }
+
+        .wrap {
+            position: relative;
+            margin: 24px 0;
+        }
+
+        .placeholder {
+            position: absolute;
+            font-size: $text_subtitle;
+            top: 14px;
+            left: 0;
+            color: $text_soft;
+            font-weight: 300;
+            transition: top 200ms ease-in-out, font-size 200ms ease-in-out, color 200ms ease-in-out;
+            pointer-events: none;
+        }
+
+        input:focus {
+            border-bottom: 2px solid $primary;
+        }
+
+        input:valid {
+            border-bottom: 2px solid $primary;
+        }
+
+        input[type="date"] ~ .placeholder {
+            top: -5px;
+            font-size: $text_paragraph;
+            color: $text_soft;
+        }
+
+        input[type="date"]:focus ~ .placeholder {
+            top: -5px;
+            font-size: $text_paragraph;
+            color: $primary;
+        }
+
+        input[type="date"]:valid ~ .placeholder {
+            top: -5px;
+            font-size: $text_paragraph;
+            color: $primary;
+        }
+
+        input:focus ~ .placeholder {
+            top: -5px;
+            font-size: $text_paragraph;
+            color: $primary;
+        }
+
+        input:valid ~ .placeholder {
+            top: -5px;
+            font-size: $text_paragraph;
+            color: $primary;
+        }
+        button {
+            margin-top: 12px;
+            margin-bottom: 24px;
+            background: $primary;
+            font-size: $text_button;
+            color: $text_white;
+            padding: 9px 0;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        #authOptions {
+            text-align: center;
+            a {
+                color: $text_primary;
+                text-decoration: none;
+            }
+        }
+    }
+    #welcomeAuth {
+        text-align: center;
+        img {
+            width: 40%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .errorMessage {
+        color: #F44336;
+        margin: 24px 0;
+        i {
+            margin-right: 12px;
+        }
+    }
+    .errorOverlay {
+        span {
+            color: #F44336 !important;
+        }
+        input {
+            border-bottom: 2px solid #F44336 !important;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+#header {
+    position: fixed;
+    z-index: 997;
+    background-color: $primary;
+    min-height: 60px;
+    box-shadow: $shadow;
+    margin-bottom: 24px;
+    h1 {
+        font-size: 28px;
+        color: $text_white;
+        padding: 13px 0;
+        font-weight: $text_light;
+    }
+    ul {
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline;
+            text-align: center;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $text_white;
+        font-size: $text_title;
+        padding: 18px 24px;
+        cursor: pointer;
+    }
+    #mobileNotification {
+        a {
+            font-size: 24px;
+            padding: 18px 0;
+            float: right;
+            &:first-child {
+                margin-left: 24px !important;
+            }
+        }
+    }
+    #branding {
+        a {
+            padding: 0;
+        }
+        img {
+            height: 60px;
+            padding: 3px;
+            float: left;
+            cursor: pointer;
+            max-width: 100%;
+        }
+        h1 {
+            float: left;
+            padding-left: 12px;
+            cursor: pointer;
+        }
+    }
+    #searchbar {
+        width: 100%;
+        float: right;
+        border-bottom: 1px solid $border_white;
+        margin: 14px 0 15px;
+        label {
+            color: $text_white;
+            font-size: $text_subtitle;
+            padding: 3px 12px 3px 0;
+        }
+        input {
+            font-size: $text_subtitle;
+            margin-left: 24px;
+            color: $text_white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-weight: $text_light;
+        }
+    }
+}
+
+#mobileNavigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #e0e0e0;
+    a {
+        width: 33.33%;
+        text-decoration: none;
+        font-size: $text_title;
+        color: $text_soft;
+        text-align: center;
+    }
+}
+
+#navDropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 999;
+    background-color: $primary;
+    list-style: none;
+    padding-left: 0;
+    box-shadow: $shadow;
+    li {
+        padding: 6px 24px;
+        font-size: $text_subtitle;
+        color: $text_white;
+    }
+}

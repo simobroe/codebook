@@ -1,0 +1,99 @@
+{
+    "users" : {
+        // storing users by their user id "uid"
+        "$uid" : {
+            "dayOfBirth" : "YYYY-MM-DD",
+            "email" : "email",
+            "firstName" : "first name",
+            "lastName" : "last name",
+            "uid": "$uid",
+            "watchers": 0,
+            "username": "alias name", // if the user does not want to show their real name
+            "bannedTill": "YYYY-MM-DD" // date untill user is unbanned
+        }
+    },
+    "projects" : {
+        // storing projects by their id
+        "key" : {
+            "name": "project name",
+            "description": "content of the description",
+            "upvotes" : 0,
+            "comments": {
+                "comment_key" : {
+                    "user": "$uid",
+                    "message": "content of the message",
+                    "upvotes": 0,
+                    "subComments": {
+                        "subComment_key": {
+                            "user": "$uid",
+                            "message": "content of the message",
+                            "upvotes": 0
+                        }
+                    }
+                }
+            },
+            "images": {
+                // add all images used in this project
+                "image_key": true
+            },
+            "techniques" : {
+                // add all technique id's that are used in this project
+                "technique_key" : true
+            },
+            "users" :{
+                // add all user id's that belong to this project'
+                "$uid" : true
+            },
+            "createdAt": "YYYY-MM-DD hh:mm:ss",
+            "updatedAt": "YYYY-MM-DD hh:mm:ss",
+            "deletedAt": "YYYY-MM-DD hh:mm:ss"
+        }
+    },
+    "articles": {
+        // storing articles by their id
+        "key" : {
+            "name": "project name",
+            "content": "content of the article",
+            "upvotes" : 0,
+            "comments": {
+                "comment_key" : {
+                    "user": "$uid",
+                    "message": "content of the message",
+                    "upvotes": 0,
+                    "subComments": {
+                        "subComment_key": {
+                            "user": "$uid",
+                            "message": "content of the message",
+                            "upvotes": 0
+                        }
+                    }
+                }
+            },
+            "images": {
+                // add all images used in this article
+                "image_key": true
+            },
+            "type" : "articleType_key",
+            "users" :{
+                // add all user id's that belong to this article'
+                "$uid" : true
+            },
+            "createdAt": "YYYY-MM-DD hh:mm:ss",
+            "updatedAt": "YYYY-MM-DD hh:mm:ss",
+            "deletedAt": "YYYY-MM-DD hh:mm:ss"        
+        }
+    },
+    "chats": {
+        "key" : {
+            "users" : {
+                // all users in this chat
+                "$uid": true
+            },
+            "messages": {
+                "message" : "content of the message",
+                "user": "$uid",
+                "sendAt" : "YYYY-MM-DD hh:mm:ss"
+            }
+        }
+    }
+}
